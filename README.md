@@ -182,6 +182,3 @@ Feedstock Maintainers
 
 * [@kenichi-maeda](https://github.com/kenichi-maeda/)
 
-
-<!-- dummy commit to enable rerendering -->
-
