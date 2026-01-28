@@ -10,7 +10,7 @@ source:
   sha256: 996e9dac163b106528aadf94ca2e8b057ef200e7b478e673ba7a0aa2e8474556
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('lbr-fri-client-sdk', max_pin='x.x') }}
   script: |
