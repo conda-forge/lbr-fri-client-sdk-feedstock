@@ -11,8 +11,12 @@ def main() -> None:
         data = zf.read(HTML_PATH)
 
     text = data.decode("utf-8", errors="ignore")
-    anchor = 'name="FRILicense"'
-    h = text.find(anchor)
+    anchors = ('name="FRILicense"', 'id="FRILicense"')
+    h = -1
+    for anchor in anchors:
+        h = text.find(anchor)
+        if h != -1:
+            break
     i = text.find("<pre", h) if h != -1 else -1
     i = text.find(">", i) + 1 if i != -1 else -1
     j = text.find("</pre>", i) if i != -1 else -1
