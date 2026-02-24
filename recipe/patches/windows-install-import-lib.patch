@@ -1,0 +1,14 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 87ff1f8..fd29c97 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -143,8 +143,10 @@ write_basic_package_version_file(
+ install(TARGETS FRIClient
+     EXPORT FRIClientTargets
+     LIBRARY DESTINATION lib
++    RUNTIME DESTINATION bin
++    ARCHIVE DESTINATION lib
+     INCLUDES DESTINATION include
+ )
+ 
+ install(
