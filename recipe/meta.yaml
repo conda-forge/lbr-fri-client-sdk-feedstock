@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/lbr-stack/fri/archive/refs/heads/fri-{{ version }}.tar.gz
   sha256: 048b9a2b8ff702d25396914a6d4b458cf0e2faf9935e8bbfadc56acfc1d8dc34
+  patches:
+    - patches/windows-install-import-lib.patch
 
 build:
-  number: 1
+  number: 2
   run_exports:
     - {{ pin_subpackage('lbr-fri-client-sdk', max_pin='x.x') }}
   script: |
@@ -35,6 +37,7 @@ test:
     - test -f $PREFIX/lib/libFRIClient*  # [unix]
     - test -f $PREFIX/include/friClientIf.h  # [unix]
     - if exist %LIBRARY_BIN%\\FRIClient.dll (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_LIB%\\FRIClient.lib (exit 0) else (exit 1)  # [win]
     - if exist %LIBRARY_INC%\\friClientIf.h (exit 0) else (exit 1)  # [win]
 
 about:
