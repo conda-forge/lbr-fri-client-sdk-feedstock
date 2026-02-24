@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lbr-stack/fri/archive/refs/heads/fri-{{ version }}.tar.gz
-  sha256: 90b3cdc58f85dc017473e5be0ade237a05b374b63deca54cb8f460313e9f26bb
+  sha256: 90b3cdc58f85dc017473e5be0ade237a05b374b63deca54cb8f460313e9f26bb 
   patches:
     - patches/windows-install-import-lib.patch
 
