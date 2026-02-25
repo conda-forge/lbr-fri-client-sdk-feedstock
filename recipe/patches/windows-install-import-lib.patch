@@ -1,8 +1,18 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 87ff1f8..fd29c97 100644
+index 87ff1f8..a9b6c7d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -143,8 +143,10 @@ write_basic_package_version_file(
+@@ -52,5 +52,5 @@ message("Found nanopb of version: " ${NANOPB_VERSION})
+ 
+-# #13: Windows support
+-# if (MSVC)
+-#     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+-# endif()
++# #13: Windows support
++if (MSVC)
++    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
++endif()
+@@ -143,7 +143,9 @@ write_basic_package_version_file(
  install(TARGETS FRIClient
      EXPORT FRIClientTargets
      LIBRARY DESTINATION lib
