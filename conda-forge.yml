@@ -12,3 +12,6 @@ bot:
     - "v1.17.x"
     - "v2.5.x"
     - "v2.7.x"
+build_platform:
+  linux_aarch64: linux_64
+  osx_arm64: osx_64
